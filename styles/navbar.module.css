@@ -1,0 +1,97 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: 1rem 4rem;
+    border: 0.5px solid rgb(211, 208, 208);
+    background-color: #f7f7f7;
+    margin: 0.5rem;
+    
+    
+}
+
+.logo img{
+    height: 5rem;
+    width: 5rem;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.left ul{
+    list-style: none;
+    display: flex;
+}
+
+.left ul li{
+    margin: 0 2rem;
+}
+
+.left ul li:hover{
+    border-bottom: 1px solid black;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+}
+
+.right span{
+    margin: 0 2rem;
+    transition: all 1s ease-in-out;
+}
+
+.right span:hover{
+    cursor: pointer;
+    border-bottom: 1px solid black;
+}
+
+.cart{
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.cart:hover{
+    cursor: pointer;
+}
+
+
+.shop{
+    display: none;
+    justify-content: space-around;
+    transition: all 0.5s ease-in-out;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+}
+
+.card img{
+    height: 30rem;
+    border: 1px solid black;
+    padding: 0.5rem;
+    /* width: 20rem; */
+}
+
+.card a{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0.25rem 0;
+}
+
+.card span{
+    font-size: 1rem;
+    margin: 0.25rem 0;
+}

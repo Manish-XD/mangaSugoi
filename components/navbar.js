@@ -5,100 +5,88 @@ import Script from "next/script";
 const Navbar = () => {
   return (
     <>
-      <Script strategy="lazyOnload">
-        {`
-        document.getElementById("shop-link").addEventListener("mouseover", mouseOver);
-
-        document.getElementById("shop-link").addEventListener("mouseout", mouseOut);
-
-        function mouseOver() {
-          document.getElementById('shop').style.display = "flex";
-          document.getElementById('shop').style.backgroundColor = "#f7f7f7";
-          document.getElementById('nav').style.marginBottom = "0";
-          document.getElementById('nav').style.borderTop = "0.5px solid rgb(211, 208, 208)";
-          document.getElementById('nav').style.borderLeft = "0.5px solid rgb(211, 208, 208)";
-          document.getElementById('nav').style.borderRight = "0.5px solid rgb(211, 208, 208)";
-          document.getElementById('nav').style.borderBottom = "0";
-          document.getElementById('shop').style.borderTop = "0";
-          document.getElementById('shop').style.borderLeft = "0.5px solid rgb(211, 208, 208)";
-          document.getElementById('shop').style.borderRight = "0.5px solid rgb(211, 208, 208)";
-          document.getElementById('shop').style.borderBottom = "0.5px solid rgb(211, 208, 208)";
-          document.getElementById('shop').style.marginLeft = "0.5rem";
-          document.getElementById('shop').style.marginRight = "0.5rem";
-
-        }
-        
-        function mouseOut() {
-          document.getElementById("shop").style.display = "none";
-        }
-        `}
-      </Script>
+      <Script src="/script.js"></Script>
       <nav id="nav" className={styles.nav}>
-        <div className={styles.left}>
-          <div className={styles.logo}>
+        <div className={styles.mainnav}>
+          <div className={styles.left}>
             <img
               src="https://www.pngitem.com/pimgs/m/536-5365058_000-vector-logos-one-piece-doflamingo-jolly-roger.png"
               alt=""
             />
+            <ul>
+              <li>
+                <a href="/">Shop</a>
+              </li>
+              <li>
+                <a href="/">Trending</a>
+              </li>
+              <li>
+                <a href="/">Latest</a>
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              <a href="/" id="shop-link">
-                Shop
-              </a>
-            </li>
-            <li>
-              <a href="/">Trending</a>
-            </li>
-            <li>
-              <a href="/">Special</a>
-            </li>
-          </ul>
+          <div className={styles.right}>
+            <span>Search</span>
+            <span>My Account</span>
+            <div className={styles.cart}>
+              <span>0</span>
+            </div>
+          </div>
         </div>
-        <div className={styles.right}>
-          <span>Search</span>
-          <span>My account</span>
-          <div className={styles.cart}>
-            <p>0</p>
+        <div className={styles.shop}>
+          <div className={styles.card}>
+            <a href="/">
+              <img
+                src="https://meo.comick.pictures/jmrRD.jpg?width=768"
+                alt=""
+              />
+              <p>Solo Leveling</p>
+            </a>
+            <p className={styles.genre}>
+              Genres: Action, Adventure, Award Winning, Drama, Fantasy,
+              Supernatural, Magic, Monsters
+            </p>
+          </div>
+          <div className={styles.card}>
+            <a href="/">
+              <img
+                src="https://meo.comick.pictures/5oQEp.png?width=768"
+                alt=""
+              />
+              <p>The Beginning After the End</p>
+            </a>
+            <p className={styles.genre}>
+              Genres: Action, Adventure, Fantasy, School Life, Tragedy, Demons,
+              Magic, Monsters, Reincarnation
+            </p>
+          </div>
+          <div className={styles.card}>
+            <a href="/">
+              <img
+                src="https://meo.comick.pictures/wNEdM.jpg?width=768"
+                alt=""
+              />
+              <p>Nano Machine</p>
+            </a>
+            <p className={styles.genre}>
+              Genres: Action, Adventure, Fantasy, Martial Arts, Sci-Fi, Wuxia
+            </p>
+          </div>
+          <div className={styles.card}>
+            <a href="/">
+              <img
+                src="https://meo.comick.pictures/LNJD6.jpg?width=768"
+                alt=""
+              />
+              <p>Second Life Ranker</p>
+            </a>
+            <p className={styles.genre}>
+              Genres: Action, Adventure, Drama, Fantasy, Martial Arts,
+              Supernatural, Demons, Magic, Monsters, Survival className={styles.genre}
+            </p>
           </div>
         </div>
       </nav>
-      <div id="shop" className={styles.shop}>
-        <div className={styles.card}>
-          <img
-            src="https://images-na.ssl-images-amazon.com/images/I/91ZiXDYRM6L.jpg"
-            alt=""
-          />
-          <a href="/">Solo Leveling</a>
-          <span>
-            Genres: Action, Adventure, Award Winning, Supernatural, Monsters
-          </span>
-        </div>
-        <div className={styles.card}>
-          <img
-            src="https://cdn.anime-planet.com/manga/primary/the-beginning-after-the-end-1.webp?t=1652139074"
-            alt=""
-          />
-          <a href="/">The Beginning After the End</a>
-          <span>
-            Genres: Action, Adventure, Fantasy, School Life, Tragedy, Demons,
-            Magic, Monsters, Reincarnation
-          </span>
-        </div>
-        <div className={styles.card}>
-          <img src="https://meo.comick.pictures/LNJD6.jpg?width=768" alt="" />
-          <a href="/">Second Life Ranker</a>
-          <span>
-            Genres: Action, Adventure, Drama, Fantasy, Martial Arts,
-            Supernatural, Demons, Magic, Monsters, Survival
-          </span>
-        </div>
-        <div className={styles.card}>
-          <img src="https://i.imgur.com/6to6EvQ.jpg" alt="" />
-          <a href="/">Nano Machine</a>
-          <span>Genres: Action, Adventure, Fantasy, Martial Arts, Sci-Fi</span>
-        </div>
-      </div>
     </>
   );
 };

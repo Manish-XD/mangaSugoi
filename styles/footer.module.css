@@ -1,0 +1,16 @@
+.footer{
+    background: #f7f6f6;
+}
+
+.footer_links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+}
+
+.left ul{
+    list-style: none;
+}

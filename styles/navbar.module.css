@@ -71,6 +71,7 @@
 .shop{
     display: flex;
     justify-content: space-around;
+    display: none;
 }
 
 /* .shop .card{

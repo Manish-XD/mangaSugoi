@@ -14,33 +14,34 @@ const Navbar = () => {
               alt=""
             />
             <ul>
-              <li>
-                <a href="/">Shop</a>
+              <li id="shop-link">
+                <a  href="/">Shop</a>
               </li>
-              <li>
+              <li id="trending-link">
                 <a href="/">Trending</a>
               </li>
-              <li>
+              <li id="latest-link">
                 <a href="/">Latest</a>
               </li>
             </ul>
           </div>
           <div className={styles.right}>
-            <span>Search</span>
-            <span>My Account</span>
+            <span id="search-link">Search</span>
+            <span id="account-link">My Account</span>
             <div className={styles.cart}>
               <span>0</span>
             </div>
           </div>
         </div>
-        <div className={styles.shop}>
+        <div id="shop" className={styles.shop}>
           <div className={styles.card}>
             <a href="/">
               <img
                 src="https://meo.comick.pictures/jmrRD.jpg?width=768"
                 alt=""
+                id="solo-img"
               />
-              <p>Solo Leveling</p>
+              <p id="solo-link">Solo Leveling</p>
             </a>
             <p className={styles.genre}>
               Genres: Action, Adventure, Award Winning, Drama, Fantasy,
@@ -52,8 +53,9 @@ const Navbar = () => {
               <img
                 src="https://meo.comick.pictures/5oQEp.png?width=768"
                 alt=""
+                id="beg-img"
               />
-              <p>The Beginning After the End</p>
+              <p id="beg-link">The Beginning After the End</p>
             </a>
             <p className={styles.genre}>
               Genres: Action, Adventure, Fantasy, School Life, Tragedy, Demons,
@@ -65,8 +67,9 @@ const Navbar = () => {
               <img
                 src="https://meo.comick.pictures/wNEdM.jpg?width=768"
                 alt=""
+                id="nano-img"
               />
-              <p>Nano Machine</p>
+              <p id="nano-link">Nano Machine</p>
             </a>
             <p className={styles.genre}>
               Genres: Action, Adventure, Fantasy, Martial Arts, Sci-Fi, Wuxia
@@ -77,8 +80,9 @@ const Navbar = () => {
               <img
                 src="https://meo.comick.pictures/LNJD6.jpg?width=768"
                 alt=""
+                id="sec-img"
               />
-              <p>Second Life Ranker</p>
+              <p id="sec-link">Second Life Ranker</p>
             </a>
             <p className={styles.genre}>
               Genres: Action, Adventure, Drama, Fantasy, Martial Arts,

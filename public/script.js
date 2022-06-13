@@ -68,3 +68,10 @@ function normalSecLink()
 {
     document.getElementById("sec-link").style.textDecoration = "none";
 }
+
+document.getElementById("search-link").addEventListener("click", showSearch);
+
+function showSearch()
+{
+    document.getElementById("search").style.display = "block";
+}

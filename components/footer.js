@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/footer.module.css";
+import Head from "next/head";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <div className={styles.footer_links}>
         <div className={styles.left}>
           <div className={styles.about}>
-            <h3 className={styles.footer_subhead}>ABOUT</h3>
+            <h3>ABOUT</h3>
             <ul>
               <li>
                 <a href="/">Contact Us</a>
@@ -56,7 +57,7 @@ const Footer = () => {
             <h3 className={styles.footer_subhead}>POLICY</h3>
             <ul>
               <li>
-                <a href="/">REturn Policy</a>
+                <a href="/">Return Policy</a>
               </li>
               <li>
                 <a href="/">Terms of use</a>
@@ -89,16 +90,16 @@ const Footer = () => {
         </div>
         <div className={styles.right}>
           <div className={styles.right_mail}>
-            <p>Mail us:</p>
-            <p>
+            <p className={styles.footer_subhead}>Mail us:</p>
+            <p className={styles.footer_subpara}>
               Manga Sugoi Internet Private Limited, Buildings Alyssa, Begonia &
               Clove Embassy Tech Village, Outer Ring Road, Devarabeesanahalli
               Village, Bengaluru, 560103, Karnataka, India
             </p>
           </div>
           <div className={styles.right_address}>
-            <p>Registered Office Address:</p>
-            <p>
+            <p className={styles.footer_subhead}>Registered Office Address:</p>
+            <p className={styles.footer_subpara}>
               Manga Sugoi Internet Private Limited, Buildings Alyssa, Begonia &
               Clove Embassy Tech Village, Outer Ring Road, Devarabeesanahalli
               Village, Bengaluru, 560103, Karnataka, India CIN :
@@ -109,10 +110,10 @@ const Footer = () => {
       </div>
       <hr/>
       <div className={styles.end_footer}>
-        <span>Become a seller</span>
-        <span>Gift Cards</span>
-        <span>Help center</span>
-        <span>© MangaSugoi.com</span>
+        <span>💲 Become a seller</span>
+        <span>🎁 Gift Cards</span>
+        <span>❓ Help center</span>
+        <p>© MangaSugoi.com</p>
         <img
           src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/payment-method_69e7ec.svg"
           alt=""

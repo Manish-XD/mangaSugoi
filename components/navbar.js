@@ -90,6 +90,11 @@ const Navbar = () => {
             </p>
           </div>
         </div>
+        <div id="search" className={styles.search}>
+          <form action="">
+            <input placeholder="Start typing here what you're looking for..." type="text" />
+          </form>
+        </div>
       </nav>
     </>
   );

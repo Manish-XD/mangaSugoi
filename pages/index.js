@@ -19,6 +19,7 @@ export default function Home() {
         id="carouselExampleControls"
         className="carousel slide"
         data-bs-ride="carousel"
+        style={{marginTop: "10rem", marginBottom: "5rem"}}
       >
         <div className="carousel-inner">
           <div className="carousel-item active" style={{height: "50vh"}}>
@@ -78,7 +79,19 @@ export default function Home() {
       <div className={styles.latest}>
         <h1>Latest Collections</h1>
         <hr/>
-
+        <div className={styles.row}>
+          <div className={styles.card}>
+            <a href="/">
+              <img src="https://meo.comick.pictures/O71ev.jpg?width=768" alt="" />
+              <span className={styles.chap}>Chapter 93</span>
+              <h3 className={styles.title}>Superhuman Battle</h3>
+              <div className={styles.rate_price}>
+                <span className={styles.rate}>Rating:4.5</span>
+                <span className={styles.price}>₹449</span>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

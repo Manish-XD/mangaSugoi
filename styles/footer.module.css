@@ -1,5 +1,10 @@
 .footer{
     background: #f7f6f6;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid rgb(197, 197, 197);
+    padding-top: 3rem;
 }
 
 .footer_links{
@@ -9,8 +14,61 @@
 
 .left{
     display: flex;
+    min-width: 50vw;
+    justify-content: space-around;
+}
+
+.left h3{
+    margin-bottom: 1rem;
 }
 
 .left ul{
     list-style: none;
+    padding: 0;
+}
+
+.left li{
+
+    margin: 0.5rem 0;
+}
+
+.left a{
+    font-size: 1.5rem;
+}
+
+.left a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.right{
+    display: flex;
+}
+
+.right_mail, .right_address{
+    padding: 0 7rem;
+}
+
+.footer_subhead{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.footer_subpara{
+    font-size: 1.5rem;
+}
+
+.end_footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.end_footer span,.end_footer p {
+    font-size: 1.5rem;
+}
+
+.end_footer span:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }

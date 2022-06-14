@@ -4,7 +4,7 @@ const shop = document.getElementById("shop");
 const nav = document.getElementById("nav");
 
 document.getElementById("shop-link").addEventListener("mouseover", displayShopDiv);
-document.getElementById("home").addEventListener("mouseover", closeShopDiv);
+// document.getElementById("home").addEventListener("mouseover", closeShopDiv);
 document.getElementById("trending-link").addEventListener("mouseover", closeShopDiv);
 document.getElementById("latest-link").addEventListener("mouseover", closeShopDiv);
 document.getElementById("search-link").addEventListener("mouseover", closeShopDiv);

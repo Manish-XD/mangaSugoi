@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/navbar.module.css";
 import Script from "next/script";
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -15,13 +16,13 @@ const Navbar = () => {
             />
             <ul>
               <li id="shop-link">
-                <a  href="/">Shop</a>
+                <Link  href="/shop">Shop</Link>
               </li>
               <li id="trending-link">
-                <a href="/">Trending</a>
+                <Link href="/trending">Trending</Link>
               </li>
               <li id="latest-link">
-                <a href="/">Latest</a>
+                <Link href="/latest">Latest</Link>
               </li>
             </ul>
           </div>

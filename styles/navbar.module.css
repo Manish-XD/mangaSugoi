@@ -4,11 +4,11 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0.5rem;
-    left: 0.5rem;
+    top: 0;
+    left: 0;
     border: 1px solid rgb(197, 197, 197);
     z-index: 2;
-    width: 100%;
+    width: 99%;
 }
 
 .mainnav{
@@ -70,6 +70,10 @@
     padding: 0.8rem 0;
 }
 
+.right .cart:hover{
+    cursor: pointer;
+}
+
 .shop{
     display: flex;
     justify-content: space-around;
@@ -111,4 +115,44 @@
 .search input:focus{
     border: none;
     outline: none;
+}
+
+.cart_menu{
+    height: 100vh;
+    width: 20vw;
+    background: #f7f6f6;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    padding: 4rem 2rem;
+    transform: translateX(100rem);
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cart_menu p{
+    font-size: 1.5rem;
+}
+
+.checkout_btn{
+    color: white;
+    background: black;
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 3rem 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkout_btn p{
+    margin: 0;
+}
+
+.close_btn{
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.close_btn:hover{
+    cursor: pointer;
 }

@@ -29,7 +29,7 @@ const Navbar = () => {
           <div className={styles.right}>
             <span id="search-link">Search</span>
             <span id="account-link">My Account</span>
-            <div className={styles.cart}>
+            <div id="cart_btn" className={styles.cart}>
               <span>0</span>
             </div>
           </div>
@@ -97,6 +97,16 @@ const Navbar = () => {
           </form>
         </div>
       </nav>
+      <div id="cart_menu" className={styles.cart_menu}>
+        <p id="close_btn" className={styles.close_btn}>X</p>
+        <p>Your cart is currently empty</p>
+        <hr />
+        <a href="/">
+          <div className={styles.checkout_btn}>
+            <p>Checkout</p>
+          </div>
+        </a>
+      </div>
     </>
   );
 };

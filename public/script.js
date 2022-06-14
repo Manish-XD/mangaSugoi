@@ -75,3 +75,16 @@ function showSearch()
 {
     document.getElementById("search").style.display = "block";
 }
+
+document.getElementById("cart_btn").addEventListener("click", showCartMenu);
+document.getElementById("close_btn").addEventListener("click", closeCartMenu);
+
+function showCartMenu()
+{
+    document.getElementById("cart_menu").style.transform = "translateX(0)";
+}
+
+function closeCartMenu()
+{
+    document.getElementById("cart_menu").style.transform = "translateX(100rem)";
+}

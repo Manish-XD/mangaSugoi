@@ -1,1 +1,113 @@
+.container{
+    color: white;
+}
 
+
+.bg_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.product{
+    background: linear-gradient(90deg, black 50%, transparent);
+    padding: 15rem 6rem;
+    display: flex;
+}
+
+.product img{
+    height: 60rem;
+}
+
+.product_details{
+    margin-left: 5rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.product_details h1{
+    font-size: 4rem;
+}
+
+.product_details h3{
+    margin: 0rem;
+}
+
+.product_details p{
+    max-width: 33vw;
+}
+
+.lang_vol{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.lang_vol img{
+    height: 3rem;
+    margin: 0 1rem;
+}
+
+.lang_vol span{
+    margin-right: 0.5rem;
+    font-size: 2rem;
+}
+
+.lang_vol select{
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+
+.price_btns{
+    /* margin-top: 2rem; */
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.buttons{
+    margin-left: 5rem;
+}
+
+
+.price_btns button{
+    background: white;
+    padding: 0.5rem 2rem;
+    font-size: 2.5rem;
+    border-radius: 8px;
+    border: none;
+    margin: 0 1rem;
+}
+
+.price_btns button:hover{
+    background: #d1d1d1;
+    cursor: pointer;
+}
+
+.pincode{
+    margin: 3rem 0;
+}
+
+.pincode input{
+    padding: 0.5rem 1rem;
+}
+
+.pincode input:focus{
+    outline: none;
+}
+
+.pincode button{
+    background: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    margin: 0 1rem;
+}
+
+.pincode button:hover{
+    background: #d1d1d1;
+    cursor: pointer;
+}

@@ -1,14 +1,25 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
 import styles from "../../styles/product.module.css";
-import { useState } from 'react'
 
 const Post = ({ addToCart, buyNow }) => {
   const router = useRouter();
   const { slug } = router.query;
-
   const [pin, setPin] = useState()
-  const [service, setService] = useState()
-
+  const [service, setService] = useState(null)
+  const checkAvailability = async () =>
+  {
+    let pins = await fetch('http://localhost:3000/api/pincode');
+    let pinJson = await pins.json();
+    if(pinJson.includes(parseInt(pin)))
+    {
+      setService(true);
+    }
+    else
+    {
+      setService(false);
+    }
+  }
   return (
     <>
       <div className={styles.container}>

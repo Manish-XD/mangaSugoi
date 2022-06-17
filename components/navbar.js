@@ -14,6 +14,7 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal }) => {
               src="https://www.pngitem.com/pimgs/m/536-5365058_000-vector-logos-one-piece-doflamingo-jolly-roger.png"
               alt=""
             />
+            <span>Manga Sugoi</span>
             <ul>
               <li id="shop-link">
                 <Link  href="/shop">Shop</Link>

@@ -1,1 +1,42 @@
+.container{
+    color: white;
+}
 
+.bg_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.product{
+    display: flex;
+    background: linear-gradient(90deg, black 50%, transparent);
+    padding: 13rem 6rem;
+    align-items: center;
+}
+
+.product_img{
+    height: 50rem;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    margin-left: 3rem;
+    width: 33vw;
+}
+
+.details h1{
+    font-size: 4rem;
+}
+
+.details p{
+    width: 30vw;
+    /* margin: 0; */
+}
+
+.lang_vol img{
+    height: 2rem;
+}

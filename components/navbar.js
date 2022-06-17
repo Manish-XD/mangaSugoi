@@ -3,7 +3,7 @@ import styles from "../styles/navbar.module.css";
 import Script from "next/script";
 import Link from 'next/link';
 
-const Navbar = () => {
+const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   return (
     <>
       <Script src="/script.js"></Script>
@@ -99,7 +99,17 @@ const Navbar = () => {
       </nav>
       <div id="cart_menu" className={styles.cart_menu}>
         <p id="close_btn" className={styles.close_btn}>X</p>
-        <p>Your cart is currently empty</p>
+        <ol>
+            {(Object.keys(cart).length === 0 && <div>Your cart is empty!</div>)}
+            {Object.keys(cart).map((k) => {
+              return <li key={k}>
+                <div>
+                  <div>{cart[k].name}({cart[k].size}/{cart[k].variant})</div>
+                </div>
+              </li>
+            })}
+          </ol>
+          <div>Subtotal: {subTotal}</div>
         <hr />
         <a href="/">
           <div className={styles.checkout_btn}>

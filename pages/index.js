@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Script from "next/script";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -19,33 +20,34 @@ export default function Home() {
         id="carouselExampleControls"
         className="carousel slide"
         data-bs-ride="carousel"
-        style={{marginTop: "10rem", marginBottom: "5rem"}}
+        style={{ marginTop: "10rem", marginBottom: "5rem" }}
       >
         <div className="carousel-inner">
-          <div className="carousel-item active" style={{height: "50vh"}}>
+          <div className="carousel-item active" style={{ height: "50vh" }}>
             <img
               src="https://images6.alphacoders.com/451/451608.jpg"
               className="d-block w-100"
               alt="..."
             />
           </div>
-          <div className="carousel-item active" style={{height: "50vh"}}>
+          <div className="carousel-item active" style={{ height: "50vh" }}>
             <img
               src="https://images6.alphacoders.com/606/606263.jpg"
               className="d-block w-100"
               alt="..."
             />
           </div>
-          <div className="carousel-item" style={{height: "50vh"}}>
+          <div className="carousel-item" style={{ height: "50vh" }}>
             <img
               src="https://images.alphacoders.com/104/104911.jpg"
               className="d-block w-100"
               alt="..."
             />
           </div>
-          <div className="carousel-item" style={{height: "50vh"}}>
+          <div className="carousel-item" style={{ height: "50vh" }}>
             <img
-              src="https://images7.alphacoders.com/105/1054068.png" style={{height: "50vh", objectFit: "cover"}}
+              src="https://images7.alphacoders.com/105/1054068.png"
+              style={{ height: "50vh", objectFit: "cover" }}
               className="d-block w-100"
               alt="..."
             />
@@ -78,18 +80,263 @@ export default function Home() {
       </div>
       <div className={styles.latest}>
         <h1>Latest Collections</h1>
-        <hr/>
+        <hr />
         <div className={styles.row}>
           <div className={styles.card}>
-            <a href="/">
-              <img src="https://meo.comick.pictures/O71ev.jpg?width=768" alt="" />
-              <span className={styles.chap}>Chapter 93</span>
-              <h3 className={styles.title}>Superhuman Battle</h3>
-              <div className={styles.rate_price}>
-                <span className={styles.rate}>Rating:4.5</span>
-                <span className={styles.price}>₹449</span>
-              </div>
-            </a>
+            <div>
+              <Link href="/product/Superhuman-Battlefield">
+                <img
+                  src="https://meo.comick.pictures/O71ev.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 7</p>
+                <h3 className={styles.title}>Superhuman Battlefield</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐ 8</span>
+                  <span className={styles.price}>₹389</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Shingeki-no-Kyojin">
+                <img
+                  src="https://meo.comick.pictures/dGZbQ.png?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 139</p>
+                <h3 className={styles.title}>Shingeki no Kyojin</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐⭐ 9</span>
+                  <span className={styles.price}>₹599</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Death-Note">
+                <img
+                  src="https://meo.comick.pictures/a0yXD.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 110</p>
+                <h3 className={styles.title}>Death Note</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐ 8</span>
+                  <span className={styles.price}>₹299</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Fullmetal-Alchemist">
+                <img
+                  src="https://meo.comick.pictures/WZ4Mq.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 108</p>
+                <h3 className={styles.title}>Fullmetal Alchemist</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐⭐ 9</span>
+                  <span className={styles.price}>₹399</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/One-Punch-Man">
+                <img
+                  src="https://meo.comick.pictures/K7Kb8.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 276</p>
+                <h3 className={styles.title}>One Punch-Man</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐⭐ 9</span>
+                  <span className={styles.price}>₹449</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Sword-Art-Online">
+                <img
+                  src="https://meo.comick.pictures/vLJ0a.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 43</p>
+                <h3 className={styles.title}>Sword Art Online</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐ 7</span>
+                  <span className={styles.price}>₹149</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Boku-no-Hero-Academia">
+                <img
+                  src="https://meo.comick.pictures/40pzk.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 356</p>
+                <h3 className={styles.title}>Boku no Hero Academia</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐ 8</span>
+                  <span className={styles.price}>₹549</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Because-you-are-shy-at-Night">
+                <img
+                  src="https://d205c5ezx6yg6v.cloudfront.net/NIHONBUNGEISHAEN/BECAUSESHY-EN/001/cover.jpg"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 5</p>
+                <h3 className={styles.title}>Because you are shy at Night</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐ 6</span>
+                  <span className={styles.price}>₹99</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Tokyo-Ghoul">
+                <img
+                  src="https://meo.comick.pictures/1KjRz.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 143</p>
+                <h3 className={styles.title}>Tokyo Ghoul</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐ 8</span>
+                  <span className={styles.price}>₹499</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Naruto">
+                <img
+                  src="https://meo.comick.pictures/dnbr7.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 700</p>
+                <h3 className={styles.title}>Naruto</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐ 8</span>
+                  <span className={styles.price}>₹299</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Kimetsu-no-Yaiba">
+                <img
+                  src="https://meo.comick.pictures/oJNkJ.png?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 206</p>
+                <h3 className={styles.title}>Kimetsu no Yaiba</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐ 8</span>
+                  <span className={styles.price}>₹399</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Hunter-x-Hunter">
+                <img
+                  src="https://meo.comick.pictures/ejoPq.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 390</p>
+                <h3 className={styles.title}>Hunter x Hunter</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐⭐ 9</span>
+                  <span className={styles.price}>₹249</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/No-Game-No-Life">
+                <img
+                  src="https://meo.comick.pictures/L0JBv.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 14</p>
+                <h3 className={styles.title}>No Game No Life</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐ 8</span>
+                  <span className={styles.price}>₹199</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Kojirase-Junai-Monster">
+                <img
+                  src="https://meo.comick.pictures/00Gga.png?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 10</p>
+                <h3 className={styles.title}>Kojirase Junai Monster</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐ 4</span>
+                  <span className={styles.price}>₹99</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Code-Geass">
+                <img
+                  src="https://meo.comick.pictures/O4gQd.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 20</p>
+                <h3 className={styles.title}>Code Geass</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐ 8</span>
+                  <span className={styles.price}>₹449</span>
+                </div>
+            </div>
+          </div>
+          <div className={styles.card}>
+            <div>
+              <Link href="/product/Tokyo-卍-Revengers">
+                <img
+                  src="https://meo.comick.pictures/70E8m.jpg?width=768"
+                  alt=""
+                />
+              </Link>
+                <p className={styles.chap}>Chapter 258</p>
+                <h3 className={styles.title}>Tokyo 卍 Revengers</h3>
+                <div className={styles.rate_price}>
+                  <span className={styles.rate}>Ratings: ⭐⭐⭐⭐ 8</span>
+                  <span className={styles.price}>₹899</span>
+                </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,12 +1,18 @@
+// import mongoose from "mongoose";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../../styles/product.module.css";
+import mongoose from "mongoose";
+import Product from "../../models/Product";
 
-const Post = ({ addToCart, buyNow }) => {
+const Post = ({ addToCart, buyNow, product }) => {
   const router = useRouter();
   const { slug } = router.query;
-  const [pin, setPin] = useState()
-  const [service, setService] = useState(null)
+  const [pin, setPin] = useState();
+  const [service, setService] = useState(null);
+  console.log(product);
+
+
   const checkAvailability = async () =>
   {
     let pins = await fetch('http://localhost:3000/api/pincode');
@@ -22,44 +28,30 @@ const Post = ({ addToCart, buyNow }) => {
   }
   return (
     <>
-      <div className={styles.container}>
+      {product.map((item)=>{return <div className={styles.container}>
         <img
           className={styles.bg_image}
-          src="https://images7.alphacoders.com/418/418724.png"
+          src={item.bgimg}
           alt=""
         />
 
         <div className={styles.product}>
           <img
             className={styles.product_img}
-            src="https://meo.comick.pictures/2yxBe.png?width=768"
+            src={item.img}
             alt=""
           />
           <div className={styles.details}>
-            <h1>Shingeki no kyojin</h1>
+            <h1>{item.title}</h1>
             <p>
-              Several hundred years ago, humans were nearly exterminated by
-              Titans. Titans are meters tall, seem to have no intelligence,
-              devour human beings and, worst of all, seem to do it for pleasure
-              rather than as a food source. A small percentage of humanity
-              survived by walling themselves in a city protected by extremely
-              high walls, even taller than the biggest of Titans. Flash forward
-              to the present and the southern district of Shinganshina has not
-              seen a Titan in over 100 years. Teenage boy Eren and his foster
-              sister Mikasa witness something horrific as one of the outer
-              district walls is damaged by a 60 meter Titan causing a breach in
-              the wall. As the smaller Titans flood the city, the two kids watch
-              in horror the tragic events Titan and take revenge for all of
-              mankind.
+              {item.desc}
             </p>
-            <span>Demographic: Shounen</span>
-            <span>Published: 2009</span>
-            <span>Status: 📗 Completed</span>
-            <span>⭐⭐⭐⭐⭐ 9.2</span>
+            <span>Demographic: {item.demographic}</span>
+            <span>Published: {item.published}</span>
+            <span>Status: {item.status}</span>
+            <span>Ratings: {item.rating}</span>
             <span>
-              Genres: Action, Award Winning, Drama, Horror, Mystery,
-              Psychological, Tragedy, Gore, Thriller, Military, Monsters,
-              Post-Apocalyptic, Survival
+              Genres: {item.genre}
             </span>
             <div className={styles.lang_vol}>
               <span>Lang: </span>
@@ -209,9 +201,9 @@ const Post = ({ addToCart, buyNow }) => {
               </select>
             </div>
             <div className={styles.price_buy}>
-              <span>₹449</span>
+              <span>₹{item.price}</span>
               <button>Buy Now</button>
-              <button onClick={() => { addToCart(slug, 1, 449, "product.title", "size", "color") }}>Add to cart</button>
+              <button onClick={() => { addToCart(slug, 1, item.price, item.title, item.lang, item.vol) }}>Add to cart</button>
             </div>
             <div className={styles.pin}>
               <input type="text" />
@@ -219,9 +211,20 @@ const Post = ({ addToCart, buyNow }) => {
             </div>
           </div>
         </div>
-      </div>
+      </div>})}
     </>
   );
 };
+
+export async function getServerSideProps(context){
+  if(!mongoose.connections[0].readyState){
+    await mongoose.connect(process.env.MONGO_URI)
+  }
+  let product = await Product.find({slug: context.query.slug})
+
+  return{
+    props: {product: JSON.parse(JSON.stringify(product))}
+  }
+}
 
 export default Post;

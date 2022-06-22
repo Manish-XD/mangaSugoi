@@ -100,23 +100,26 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       </nav>
       <div id="cart_menu" className={styles.cart_menu}>
         <p id="close_btn" className={styles.close_btn}>X</p>
-        <ol>
+        <div>
             {(Object.keys(cart).length === 0 && <div>Your cart is empty!</div>)}
             {Object.keys(cart).map((k) => {
-              return <li key={k}>
-                <div>
-                  <div>{cart[k].name}({cart[k].size}/{cart[k].variant})</div>
+              return <p key={k}>
+                <div className={styles.cart_items}>
+                  <h3>{cart[k].name}<span>₹{(parseInt(cart[k].qty))*(parseInt(cart[k].price))}</span></h3>
+                  <span>qty: {cart[k].qty}</span>
+                  <span>Lang: {cart[k].lang}</span>
+                  <span>Vol: {cart[k].vol}</span>
                 </div>
-              </li>
+              </p>
             })}
-          </ol>
+          </div>
           <div>Subtotal: {subTotal}</div>
         <hr />
-        <a href="/">
+        <Link href="/cart">
           <div className={styles.checkout_btn}>
             <p>Checkout</p>
           </div>
-        </a>
+        </Link>
       </div>
     </>
   );

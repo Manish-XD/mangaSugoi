@@ -1,0 +1,29 @@
+.cart_container{
+    margin-top: 10rem;
+    display: flex;
+}
+
+.left_sidebar{
+    padding: 4rem;
+}
+
+.left_sidebar h2{
+    font-size: 4rem;
+}
+
+.left_sidebar a{
+    font-size: 2rem;
+}
+
+.right_sidebar{
+    font-size: 2rem;
+    padding: 4rem;
+}
+
+.cart_list{
+    margin: 2rem 0;
+}
+
+.cart_list span{
+    margin: 0rem 4rem;
+}

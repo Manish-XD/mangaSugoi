@@ -29,20 +29,20 @@ function MyApp({ Component, pageProps }) {
     setSubTotal(subt)
   }
 
-  const addToCart = (itemCode, qty, price, name, size, variant) => {
+  const addToCart = (mangaCode, qty, price, name, lang, vol) => {
     let newCart = cart;
-    if (itemCode in cart) {
-      newCart[itemCode].qty = cart[itemCode].qty + qty
+    if (mangaCode in cart) {
+      newCart[mangaCode].qty = cart[mangaCode].qty + qty
     }
     else {
-      newCart[itemCode] = { qty: 1, price, name, size, variant }
+      newCart[mangaCode] = { qty: 1, price, name, lang, vol }
     }
     setCart(newCart)
     saveCart(newCart)
   }
 
-  const buyNow = (itemCode, qty, price, name, size, variant) => {
-    let newCart = { itemCode: { qty: 1, price, name, size, variant } }
+  const buyNow = (mangaCode, qty, price, name, lang, vol) => {
+    let newCart = { mangaCode: { qty: 1, price, name, lang, vol } }
     setCart(newCart)
     saveCart(newCart)
     router.push('/checkout')
@@ -53,13 +53,13 @@ function MyApp({ Component, pageProps }) {
     saveCart({})
   }
 
-  const removeFromCart = (itemCode, qty, price, name, size, variant) => {
+  const removeFromCart = (mangaCode, qty, price, name, lang, vol) => {
     let newCart = JSON.parse(JSON.stringify(cart));
-    if (itemCode in cart) {
-      newCart[itemCode].qty = cart[itemCode].qty - qty
+    if (mangaCode in cart) {
+      newCart[mangaCode].qty = cart[mangaCode].qty - qty
     }
-    if (newCart[itemCode]["qty"] <= 0) {
-      delete newCart[itemCode]
+    if (newCart[mangaCode]["qty"] <= 0) {
+      delete newCart[mangaCode]
     }
     setCart(newCart)
     saveCart(newCart)

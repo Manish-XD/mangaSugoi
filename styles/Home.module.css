@@ -1,3 +1,46 @@
 .latest{
     padding: 0 4rem;
 }
+
+.row{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 3rem ;
+    justify-content: space-around;
+    margin-top: 4rem;
+}
+
+.row .card{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    border: 1px solid black;
+    transition: all 0.3s ease-in-out;
+    /* margin: 3rem 8rem; */
+}
+
+.row .card:hover{
+    transform: scale(1.1);
+}
+
+.row .card img{
+    height: 30rem;
+    padding: 0rem 3rem;
+    margin: 2rem 0;
+}
+
+.chap{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.title{
+    font-size: 2rem;
+    margin: 0;
+}
+
+.rate_price{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}

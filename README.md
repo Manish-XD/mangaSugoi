@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Screenshots
 
-![ss1](/public/ss1.png)
-![ss2](/public/ss2.png)
-![ss3](/public/ss3.png)
-![ss4](/public/ss4.png)
+![ss1](/public/ss1.PNG)
+![ss2](/public/ss2.PNG)
+![ss3](/public/ss3.PNG)
+![ss4](/public/ss4.PNG)

@@ -70,6 +70,9 @@ const Login = () => {
               id="Password"
               name="Password"
             />
+                      <span style={{textAlign: "center"}}>
+            Don't have an account? <Link href="/signup">Sign up</Link>
+          </span>
           <button type="submit">Log in</button>
           </form>
           <span>

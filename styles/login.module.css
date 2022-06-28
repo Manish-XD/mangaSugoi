@@ -71,6 +71,8 @@
 
 .login_form_right{
     width: 50%;
+    display: flex;
+    align-items: center;
 }
 
 .login_form_right img{

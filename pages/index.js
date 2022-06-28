@@ -6,6 +6,7 @@ import one from "../public/1.png";
 import two from "../public/2.png";
 import three from "../public/3.png";
 import four from "../public/4.png";
+import arrow from "../public/arrow.gif"
 import Image from "next/image";
 
 export default function Home() {
@@ -52,7 +53,6 @@ export default function Home() {
           <div className="carousel-item" style={{ height: "50vh" }}>
             <Image
               src={four}
-              style={{ height: "50vh", objectFit: "cover" }}
               className="d-block w-100"
               alt="..."
             />
@@ -343,6 +343,10 @@ export default function Home() {
                 </div>
             </div>
           </div>
+        </div>
+        <div className={styles.seemore}>
+          <Link href="/shop"><span className={styles.txt}>See more</span></Link>
+          <Link href="/shop"><span className={styles.arrow}>&rarr;</span></Link>
         </div>
       </div>
     </div>

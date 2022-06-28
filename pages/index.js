@@ -2,6 +2,11 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Script from "next/script";
 import Link from "next/link";
+import one from "../public/1.png";
+import two from "../public/2.png";
+import three from "../public/3.png";
+import four from "../public/4.png";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -24,29 +29,29 @@ export default function Home() {
       >
         <div className="carousel-inner">
           <div className="carousel-item active" style={{ height: "50vh" }}>
-            <img
-              src="https://images6.alphacoders.com/451/451608.jpg"
+            <Image
+              src={one}
               className="d-block w-100"
               alt="..."
             />
           </div>
           <div className="carousel-item active" style={{ height: "50vh" }}>
-            <img
-              src="https://images6.alphacoders.com/606/606263.jpg"
+            <Image
+              src={two}
               className="d-block w-100"
               alt="..."
             />
           </div>
           <div className="carousel-item" style={{ height: "50vh" }}>
-            <img
-              src="https://images.alphacoders.com/104/104911.jpg"
+            <Image
+              src={three}
               className="d-block w-100"
               alt="..."
             />
           </div>
           <div className="carousel-item" style={{ height: "50vh" }}>
-            <img
-              src="https://images7.alphacoders.com/105/1054068.png"
+            <Image
+              src={four}
               style={{ height: "50vh", objectFit: "cover" }}
               className="d-block w-100"
               alt="..."

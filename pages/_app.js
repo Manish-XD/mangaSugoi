@@ -2,8 +2,11 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import { useState, useEffect } from 'react'
 import '../styles/globals.css'
+import { useRouter } from 'next/router';
 
 function MyApp({ Component, pageProps }) {
+
+  const router = useRouter();
 
   const [cart, setCart] = useState({})
   const [subTotal, setSubTotal] = useState(0)
@@ -45,7 +48,7 @@ function MyApp({ Component, pageProps }) {
     let newCart = { mangaCode: { qty: 1, price, name, lang, vol } }
     setCart(newCart)
     saveCart(newCart)
-    router.push('/checkout')
+    router.push('/cart')
   }
 
   const clearCart = () => {

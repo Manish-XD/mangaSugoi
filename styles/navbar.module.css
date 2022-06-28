@@ -84,13 +84,13 @@
     max-width: 40rem;
 } */
 
-.shop .card a img{
+.shop .card img{
     height: 40rem;
     padding: 1rem;
     border: 1px solid black;
 }
 
-.shop .card a p{
+.shop .card  p{
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -130,6 +130,7 @@
     transition: all 0.3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     font-size: 2rem;
+    padding-right: 0rem;
 }
 
 .cart_menu p{
@@ -169,4 +170,43 @@
 
 .cart_items span{
     margin: 0 1.5rem;
+}
+
+.account{
+    padding: 2rem 4rem;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.account p{
+    font-size: 2rem;
+}
+
+.account .btn{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account .btn > span:hover{
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.account .btn button{
+    background: black;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.account .btn button:hover{
+    cursor: pointer;
+    background-image: url("https://pbs.twimg.com/media/FSuyqZ7WUAAlJVr?format=jpg&name=360x360");
+    color: black;
 }

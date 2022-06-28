@@ -10,11 +10,13 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       <nav id="nav" className={styles.nav}>
         <div className={styles.mainnav}>
           <div className={styles.left}>
+            <Link href="/">
             <img
               src="https://www.pngitem.com/pimgs/m/536-5365058_000-vector-logos-one-piece-doflamingo-jolly-roger.png"
               alt=""
             />
-            <span>Manga Sugoi</span>
+            </Link>
+            <Link href="/"><span>Manga Sugoi</span></Link>
             <ul>
               <li id="shop-link">
                 <Link  href="/shop">Shop</Link>
@@ -37,58 +39,58 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         </div>
         <div id="shop" className={styles.shop}>
           <div className={styles.card}>
-            <a href="/">
+            <Link href="/product/solo-leveling">
               <img
                 src="https://meo.comick.pictures/jmrRD.jpg?width=768"
                 alt=""
                 id="solo-img"
               />
+            </Link>
               <p id="solo-link">Solo Leveling</p>
-            </a>
             <p className={styles.genre}>
               Genres: Action, Adventure, Award Winning, Drama, Fantasy,
               Supernatural, Magic, Monsters
             </p>
           </div>
           <div className={styles.card}>
-            <a href="/">
+            <Link href="/product/The-Beginning-After-the-End">
               <img
                 src="https://meo.comick.pictures/5oQEp.png?width=768"
                 alt=""
                 id="beg-img"
               />
+            </Link>
               <p id="beg-link">The Beginning After the End</p>
-            </a>
             <p className={styles.genre}>
               Genres: Action, Adventure, Fantasy, School Life, Tragedy, Demons,
               Magic, Monsters, Reincarnation
             </p>
           </div>
           <div className={styles.card}>
-            <a href="/">
+            <Link href="/product/Nano-Machine">
               <img
                 src="https://meo.comick.pictures/wNEdM.jpg?width=768"
                 alt=""
                 id="nano-img"
               />
+            </Link>
               <p id="nano-link">Nano Machine</p>
-            </a>
             <p className={styles.genre}>
               Genres: Action, Adventure, Fantasy, Martial Arts, Sci-Fi, Wuxia
             </p>
           </div>
           <div className={styles.card}>
-            <a href="/">
+            <Link href="/product/Second-Life-Ranker">
               <img
                 src="https://meo.comick.pictures/LNJD6.jpg?width=768"
                 alt=""
                 id="sec-img"
               />
+            </Link>
               <p id="sec-link">Second Life Ranker</p>
-            </a>
             <p className={styles.genre}>
               Genres: Action, Adventure, Drama, Fantasy, Martial Arts,
-              Supernatural, Demons, Magic, Monsters, Survival className={styles.genre}
+              Supernatural, Demons, Magic, Monsters, Survival
             </p>
           </div>
         </div>
@@ -97,20 +99,28 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             <input placeholder="Start typing here what you're looking for..." type="text" />
           </form>
         </div>
+        <div id="account" className={styles.account}>
+          <p>Create an account or log in to <strong>view your orders, return or adjust your personal information.</strong></p>
+          <div className={styles.btn}>
+          <Link href="/signup"><span id="account_btn">Create Account</span></Link>
+          <Link href="/login"><button id="login_btn">Login</button></Link>
+          </div>
+        </div>
       </nav>
       <div id="cart_menu" className={styles.cart_menu}>
         <p id="close_btn" className={styles.close_btn}>X</p>
         <div>
             {(Object.keys(cart).length === 0 && <div>Your cart is empty!</div>)}
             {Object.keys(cart).map((k) => {
-              return <p key={k}>
+              return <div key={k}>
+                {/* <img src={cart[k].img} alt="abc" /> */}
                 <div className={styles.cart_items}>
                   <h3>{cart[k].name}<span>₹{(parseInt(cart[k].qty))*(parseInt(cart[k].price))}</span></h3>
                   <span>qty: {cart[k].qty}</span>
                   <span>Lang: {cart[k].lang}</span>
                   <span>Vol: {cart[k].vol}</span>
                 </div>
-              </p>
+              </div>
             })}
           </div>
           <div>Subtotal: {subTotal}</div>

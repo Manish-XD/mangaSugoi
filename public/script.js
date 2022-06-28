@@ -4,12 +4,33 @@ const shop = document.getElementById("shop");
 const nav = document.getElementById("nav");
 
 document.getElementById("shop-link").addEventListener("mouseover", displayShopDiv);
+document.getElementById("shop-link").addEventListener("click", closeShopDiv);
+document.getElementById("shop-link").addEventListener("mouseover", hideSearch);
+document.getElementById("shop-link").addEventListener("mouseover", hideAccount);
 // document.getElementById("home").addEventListener("mouseover", closeShopDiv);
 document.getElementById("trending-link").addEventListener("mouseover", closeShopDiv);
+document.getElementById("trending-link").addEventListener("mouseover", hideSearch);
+document.getElementById("trending-link").addEventListener("mouseover", hideAccount);
 document.getElementById("latest-link").addEventListener("mouseover", closeShopDiv);
+document.getElementById("latest-link").addEventListener("mouseover", hideSearch);
+document.getElementById("latest-link").addEventListener("mouseover", hideAccount);
 document.getElementById("search-link").addEventListener("mouseover", closeShopDiv);
+document.getElementById("search-link").addEventListener("mouseover", hideAccount);
 document.getElementById("account-link").addEventListener("mouseover", closeShopDiv);
+document.getElementById("account-link").addEventListener("mouseover", hideSearch);
+document.getElementById("account-link").addEventListener("click", showAccount);
+document.getElementById("login_btn").addEventListener("click", hideAccount);
+document.getElementById("account_btn").addEventListener("click", hideAccount);
 // shop.addEventListener("mouseout", closeShopDiv);
+
+function showAccount()
+{
+    document.getElementById("account").style.display = "block";
+}
+function hideAccount()
+{
+    document.getElementById("account").style.display = "none";
+}
 
 
 function displayShopDiv()
@@ -74,6 +95,10 @@ document.getElementById("search-link").addEventListener("click", showSearch);
 function showSearch()
 {
     document.getElementById("search").style.display = "block";
+}
+function hideSearch()
+{
+    document.getElementById("search").style.display = "none";
 }
 
 document.getElementById("cart_btn").addEventListener("click", showCartMenu);

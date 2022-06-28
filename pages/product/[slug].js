@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import styles from "../../styles/product.module.css";
 import mongoose from "mongoose";
 import Product from "../../models/Product";
-
 const Post = ({ addToCart, buyNow, product }) => {
   const router = useRouter();
   const { slug } = router.query;
@@ -26,6 +25,12 @@ const Post = ({ addToCart, buyNow, product }) => {
       setService(false);
     }
   }
+
+  // const buyNow = () => {
+  //   addToCart(slug, 1, product.price, product.title, product.lang, product.vol);
+  //   router.push("/checkout")
+  // }
+
   return (
     <>
       {product.map((item)=>{return <div className={styles.container}>
@@ -202,7 +207,7 @@ const Post = ({ addToCart, buyNow, product }) => {
             </div>
             <div className={styles.price_buy}>
               <span>₹{item.price}</span>
-              <button>Buy Now</button>
+              <button onClick={() => { buyNow(slug, 1, item.price, item.title, item.lang, item.vol)}}>Buy Now</button>
               <button onClick={() => { addToCart(slug, 1, item.price, item.title, item.lang, item.vol) }}>Add to cart</button>
             </div>
             <div className={styles.pin}>

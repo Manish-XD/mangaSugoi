@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "../styles/shop.module.css";
+import Link from 'next/link';
 
 const Trending = () => {
   return (
@@ -8,7 +9,7 @@ const Trending = () => {
       <hr />
       <div className={styles.row}>
         <div className={styles.card}>
-          <a href="/">
+          <Link href="/">
             <img src="https://meo.comick.pictures/5owqn.jpg?width=768" alt="" />
             <p className={styles.chap}>Chapter 93</p>
             <h3 className={styles.title}>Superhuman Battle</h3>
@@ -16,10 +17,10 @@ const Trending = () => {
               <span className={styles.rate}>Ratings: 4.5</span>
               <span className={styles.price}>₹449</span>
             </div>
-          </a>
+          </Link>
         </div>
         <div className={styles.card}>
-          <a href="/">
+          <Link href="/">
             <img src="https://meo.comick.pictures/5owqn.jpg?width=768" alt="" />
             <p className={styles.chap}>Chapter 93</p>
             <h3 className={styles.title}>Superhuman Battle</h3>
@@ -27,10 +28,10 @@ const Trending = () => {
               <span className={styles.rate}>Ratings: 4.5</span>
               <span className={styles.price}>₹449</span>
             </div>
-          </a>
+          </Link>
         </div>
         <div className={styles.card}>
-          <a href="/">
+          <Link href="/">
             <img src="https://meo.comick.pictures/5owqn.jpg?width=768" alt="" />
             <p className={styles.chap}>Chapter 93</p>
             <h3 className={styles.title}>Superhuman Battle</h3>
@@ -38,10 +39,10 @@ const Trending = () => {
               <span className={styles.rate}>Ratings: 4.5</span>
               <span className={styles.price}>₹449</span>
             </div>
-          </a>
+          </Link>
         </div>
         <div className={styles.card}>
-          <a href="/">
+          <Link href="/">
             <img src="https://meo.comick.pictures/5owqn.jpg?width=768" alt="" />
             <p className={styles.chap}>Chapter 93</p>
             <h3 className={styles.title}>Superhuman Battle</h3>
@@ -49,10 +50,10 @@ const Trending = () => {
               <span className={styles.rate}>Ratings: 4.5</span>
               <span className={styles.price}>₹449</span>
             </div>
-          </a>
+          </Link>
         </div>
         <div className={styles.card}>
-          <a href="/">
+          <Link href="/">
             <img src="https://meo.comick.pictures/5owqn.jpg?width=768" alt="" />
             <p className={styles.chap}>Chapter 93</p>
             <h3 className={styles.title}>Superhuman Battle</h3>
@@ -60,7 +61,7 @@ const Trending = () => {
               <span className={styles.rate}>Ratings: 4.5</span>
               <span className={styles.price}>₹449</span>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import styles from "../../styles/product.module.css";
 import mongoose from "mongoose";
 import Product from "../../models/Product";
+import Link from "next/link";
+
 const Post = ({ addToCart, buyNow, product }) => {
   const router = useRouter();
   const { slug } = router.query;
@@ -14,7 +16,7 @@ const Post = ({ addToCart, buyNow, product }) => {
 
   const checkAvailability = async () =>
   {
-    let pins = await fetch('http://localhost:3000/api/pincode');
+    let pins = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pincode`);
     let pinJson = await pins.json();
     if(pinJson.includes(parseInt(pin)))
     {
@@ -33,7 +35,7 @@ const Post = ({ addToCart, buyNow, product }) => {
 
   return (
     <>
-      {product.map((item)=>{return <div className={styles.container}>
+      {product.map((item)=>{return <div key={item.title} className={styles.container}>
         <img
           className={styles.bg_image}
           src={item.bgimg}
@@ -60,8 +62,8 @@ const Post = ({ addToCart, buyNow, product }) => {
             </span>
             <div className={styles.lang_vol}>
               <span>Lang: </span>
-              <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Emoji_u1f1fa_1f1f8.svg/2048px-Emoji_u1f1fa_1f1f8.svg.png" alt="" /></a>
-              <a href="/"><img src="https://cdn.countryflags.com/thumbs/japan/flag-waving-250.png" alt="" /></a>
+              <Link href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Emoji_u1f1fa_1f1f8.svg/2048px-Emoji_u1f1fa_1f1f8.svg.png" alt="" /></Link>
+              <Link href="/"><img src="https://cdn.countryflags.com/thumbs/japan/flag-waving-250.png" alt="" /></Link>
               <span>Vol: </span>
               <select name="vol" id="vol">
                 <option value="139">139</option>

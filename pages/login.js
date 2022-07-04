@@ -19,7 +19,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = { email, password };
-    let res = await fetch("http://localhost:3000/api/login", {
+    let res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,10 +31,10 @@ const Login = () => {
     setEmail("");
     setPassword("");
     router.push(`/`);
-    
-      if(response.success){
-        localStorage.setItem("token", response.token);
-      }
+
+    if (response.success) {
+      localStorage.setItem("token", response.token);
+    }
   };
 
   return (
@@ -70,10 +70,10 @@ const Login = () => {
               id="Password"
               name="Password"
             />
-                      <span style={{textAlign: "center"}}>
-            Don't have an account? <Link href="/signup">Sign up</Link>
-          </span>
-          <button type="submit">Log in</button>
+            <span style={{ textAlign: "center" }}>
+              Don't have an account? <Link href="/signup">Sign up</Link>
+            </span>
+            <button type="submit">Log in</button>
           </form>
           <span>
             <Link href="/">Forgot Password?</Link>

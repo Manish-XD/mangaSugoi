@@ -210,3 +210,25 @@
     background-image: url("https://c.tenor.com/NXvU9jbBUGMAAAAC/fireworks.gif");
     color: white;
 }
+
+.logout{
+    margin: 10rem 0 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logout button{
+    background: black;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.logout button:hover{
+    cursor: pointer;
+    background-image: url("https://media2.giphy.com/media/fop5eTlBCgFCE/giphy.gif");
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/footer.module.css";
 import Head from "next/head";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -11,25 +12,25 @@ const Footer = () => {
             <h3>ABOUT</h3>
             <ul>
               <li>
-                <a href="/">Contact Us</a>
+                <Link href="/">Contact Us</Link>
               </li>
               <li>
-                <a href="/">About Us</a>
+                <Link href="/">About Us</Link>
               </li>
               <li>
-                <a href="/">Careers</a>
+                <Link href="/">Careers</Link>
               </li>
               <li>
-                <a href="/">Manga Sugoi Stories</a>
+                <Link href="/">Manga Sugoi Stories</Link>
               </li>
               <li>
-                <a href="/">Press</a>
+                <Link href="/">Press</Link>
               </li>
               <li>
-                <a href="/">Manga Wholesale</a>
+                <Link href="/">Manga Wholesale</Link>
               </li>
               <li>
-                <a href="/">Corporate Information</a>
+                <Link href="/">Corporate Information</Link>
               </li>
             </ul>
           </div>
@@ -37,19 +38,19 @@ const Footer = () => {
             <h3 className={styles.footer_subhead}>HELP</h3>
             <ul>
               <li>
-                <a href="/">Payments</a>
+                <Link href="/">Payments</Link>
               </li>
               <li>
-                <a href="/">Shipping</a>
+                <Link href="/">Shipping</Link>
               </li>
               <li>
-                <a href="/">Cancellation & returns</a>
+                <Link href="/">Cancellation & returns</Link>
               </li>
               <li>
-                <a href="/">FAQ</a>
+                <Link href="/">FAQ</Link>
               </li>
               <li>
-                <a href="/">Report Infringement</a>
+                <Link href="/">Report Infringement</Link>
               </li>
             </ul>
           </div>
@@ -57,19 +58,19 @@ const Footer = () => {
             <h3 className={styles.footer_subhead}>POLICY</h3>
             <ul>
               <li>
-                <a href="/">Return Policy</a>
+                <Link href="/">Return Policy</Link>
               </li>
               <li>
-                <a href="/">Terms of use</a>
+                <Link href="/">Terms of use</Link>
               </li>
               <li>
-                <a href="/">Security</a>
+                <Link href="/">Security</Link>
               </li>
               <li>
-                <a href="/">Privacy</a>
+                <Link href="/">Privacy</Link>
               </li>
               <li>
-                <a href="/">Sitemap</a>
+                <Link href="/">Sitemap</Link>
               </li>
             </ul>
           </div>
@@ -77,13 +78,13 @@ const Footer = () => {
             <h3 className={styles.footer_subhead}>SOCIAL</h3>
             <ul>
               <li>
-                <a href="/">Facebook</a>
+                <Link href="/">Facebook</Link>
               </li>
               <li>
-                <a href="/">Twitter</a>
+                <Link href="/">Twitter</Link>
               </li>
               <li>
-                <a href="/">YouTube</a>
+                <Link href="/">YouTube</Link>
               </li>
             </ul>
           </div>

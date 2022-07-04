@@ -2,8 +2,20 @@ import React from "react";
 import styles from "../styles/navbar.module.css";
 import Script from "next/script";
 import Link from 'next/link';
+import { useState } from "react";
+import { useEffect } from "react";
 
-const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal }) => {
+const Navbar = ({logout, user, cart, addToCart, removeFromCart, clearCart, subTotal }) => {
+  const [display, setdisplay] = useState("flex");
+  useEffect(() => {
+    if(user.value===null){
+      setdisplay("flex");
+    }
+    else{
+      setdisplay("none");
+    }
+  }, [])
+  
   return (
     <>
       <Script src="/script.js"></Script>
@@ -101,7 +113,12 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         </div>
         <div id="account" className={styles.account}>
           <p>Create an account or log in to <strong>view your orders, return or adjust your personal information.</strong></p>
-          <div className={styles.btn}>
+          {user.value && <div className={styles.logout}>
+            <button>My account</button>
+            <Link href="/orders"><button>Orders</button></Link>
+            <button onClick={logout} >Logout</button>
+          </div>}
+          <div style={{display: `${display}`}} className={styles.btn}>
           <Link href="/signup"><span id="account_btn">Create Account</span></Link>
           <Link href="/login"><button id="login_btn">Login</button></Link>
           </div>

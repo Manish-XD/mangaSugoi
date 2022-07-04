@@ -6,7 +6,7 @@ const Latest = () => {
   return (
     <div className={styles.shop}>
       <h1>Latest Collections:</h1>
-      <hr />
+      {/* <hr />
       <div className={styles.row}>
         <div className={styles.card}>
           <Link href="/">
@@ -144,7 +144,7 @@ const Latest = () => {
             </div>
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

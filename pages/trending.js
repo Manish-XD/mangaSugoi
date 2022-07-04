@@ -6,7 +6,7 @@ const Trending = () => {
   return (
     <div className={styles.shop}>
       <h1>Trending Collections:</h1>
-      <hr />
+      {/* <hr />
       <div className={styles.row}>
         <div className={styles.card}>
           <Link href="/">
@@ -63,7 +63,7 @@ const Trending = () => {
             </div>
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

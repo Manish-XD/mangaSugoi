@@ -34,10 +34,10 @@ const Navbar = ({logout, user, cart, addToCart, removeFromCart, clearCart, subTo
                 <Link  href="/shop">Shop</Link>
               </li>
               <li id="trending-link">
-                <Link href="/trending">Trending</Link>
+                <Link href="/">Trending</Link>
               </li>
               <li id="latest-link">
-                <Link href="/latest">Latest</Link>
+                <Link href="/">Latest</Link>
               </li>
             </ul>
           </div>

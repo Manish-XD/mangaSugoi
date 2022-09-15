@@ -8,6 +8,7 @@ import three from "../public/3.png";
 import four from "../public/4.png";
 import arrow from "../public/arrow.gif"
 import Image from "next/image";
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (

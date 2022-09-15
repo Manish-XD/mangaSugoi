@@ -4,9 +4,18 @@ import Script from "next/script";
 import Link from 'next/link';
 import { useState } from "react";
 import { useEffect } from "react";
+import Image from "next/image";
 
 const Navbar = ({logout, user, cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   const [display, setdisplay] = useState("flex");
+  const [showcart, setshowcart] = useState("translateX(100rem)");
+  const toggleCart = () => {
+    if (showcart === "translateX(0)") {
+        setshowcart("translateX(100rem)");
+    } else {
+        setshowcart("translateX(0)");
+    }
+}
   useEffect(() => {
     if(user.value===null){
       setdisplay("flex");
@@ -15,7 +24,7 @@ const Navbar = ({logout, user, cart, addToCart, removeFromCart, clearCart, subTo
       setdisplay("none");
     }
   }, [])
-  
+  console.log(cart);
   return (
     <>
       <Script src="/script.js"></Script>
@@ -26,9 +35,10 @@ const Navbar = ({logout, user, cart, addToCart, removeFromCart, clearCart, subTo
             <img
               src="https://www.pngitem.com/pimgs/m/536-5365058_000-vector-logos-one-piece-doflamingo-jolly-roger.png"
               alt=""
+              style={{cursor: "pointer"}}
             />
             </Link>
-            <Link href="/"><span>Manga Sugoi</span></Link>
+            <Link href="/"><span style={{marginLeft: "1.5rem", cursor: "pointer"}}>Manga Sugoi</span></Link>
             <ul>
               <li id="shop-link">
                 <Link  href="/shop">Shop</Link>
@@ -44,8 +54,8 @@ const Navbar = ({logout, user, cart, addToCart, removeFromCart, clearCart, subTo
           <div className={styles.right}>
             <span id="search-link">Search</span>
             <span id="account-link">My Account</span>
-            <div id="cart_btn" className={styles.cart}>
-              <span>0</span>
+            <div id="cart_btn" className={styles.cart} onClick={()=>toggleCart()}>
+              <span>{Object.keys(cart).length}</span>
             </div>
           </div>
         </div>
@@ -124,14 +134,14 @@ const Navbar = ({logout, user, cart, addToCart, removeFromCart, clearCart, subTo
           </div>
         </div>
       </nav>
-      <div id="cart_menu" className={styles.cart_menu}>
-        <p id="close_btn" className={styles.close_btn}>X</p>
+      <div id="cart_menu" className={styles.cart_menu} style={{transform: `${showcart}`}}>
+        <p id="close_btn" className={styles.close_btn} onClick={()=>toggleCart()}>X</p>
         <div>
             {(Object.keys(cart).length === 0 && <div>Your cart is empty!</div>)}
             {Object.keys(cart).map((k) => {
-              return <div key={k}>
-                {/* <img src={cart[k].img} alt="abc" /> */}
-                <div className={styles.cart_items}>
+              return <div key={k} className={styles.cart_items}>
+                <img src={cart[k].img} alt="abc" />
+                <div >
                   <h3>{cart[k].name}<span>₹{(parseInt(cart[k].qty))*(parseInt(cart[k].price))}</span></h3>
                   <span>qty: {cart[k].qty}</span>
                   <span>Lang: {cart[k].lang}</span>

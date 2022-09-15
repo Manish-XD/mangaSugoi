@@ -9,7 +9,7 @@ const Footer = () => {
       <div className={styles.footer_links}>
         <div className={styles.left}>
           <div className={styles.about}>
-            <h3>ABOUT</h3>
+            <h3 className={styles.footer_subhead}>ABOUT</h3>
             <ul>
               <li>
                 <Link href="/">Contact Us</Link>
@@ -114,7 +114,7 @@ const Footer = () => {
         <span>💲 Become a seller</span>
         <span>🎁 Gift Cards</span>
         <span>❓ Help center</span>
-        <p>© MangaSugoi.com</p>
+        <span>© MangaSugoi.com</span>
         <img
           src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/payment-method_69e7ec.svg"
           alt=""

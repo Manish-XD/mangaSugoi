@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import '../styles/globals.css'
 import { useRouter } from 'next/router';
 import LoadingBar from 'react-top-loading-bar';
+import { motion } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {
 
@@ -46,20 +47,20 @@ function MyApp({ Component, pageProps }) {
     setSubTotal(subt)
   }
 
-  const addToCart = (mangaCode, qty, price, name, lang, vol) => {
+  const addToCart = (mangaCode, qty, price, name, lang, vol, img) => {
     let newCart = cart;
     if (mangaCode in cart) {
       newCart[mangaCode].qty = cart[mangaCode].qty + qty
     }
     else {
-      newCart[mangaCode] = { qty: 1, price, name, lang, vol }
+      newCart[mangaCode] = { qty: 1, price, name, lang, vol, img}
     }
     setCart(newCart)
     saveCart(newCart)
   }
 
-  const buyNow = (mangaCode, qty, price, name, lang, vol) => {
-    let newCart = { mangaCode: { qty: 1, price, name, lang, vol } }
+  const buyNow = (mangaCode, qty, price, name, lang, vol, img) => {
+    let newCart = { mangaCode: { qty: 1, price, name, lang, vol, img } }
     setCart(newCart)
     saveCart(newCart)
     router.push('/cart')
@@ -70,7 +71,7 @@ function MyApp({ Component, pageProps }) {
     saveCart({})
   }
 
-  const removeFromCart = (mangaCode, qty, price, name, lang, vol) => {
+  const removeFromCart = (mangaCode, qty, price, name, lang, vol, img) => {
     let newCart = JSON.parse(JSON.stringify(cart));
     if (mangaCode in cart) {
       newCart[mangaCode].qty = cart[mangaCode].qty - qty
@@ -99,7 +100,18 @@ function MyApp({ Component, pageProps }) {
       onLoaderFinished={() => setProgress(0)}
     />
     <Navbar logout={logout} user={user} key={key} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal}/>
+    <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" variants={{
+        pageInitial:{
+          opacity: 0,
+          scale: .3
+        },
+        pageAnimate:{
+          opacity: 1,
+          scale: 1
+        }
+      }}>
     <Component buyNow={buyNow} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} subTotal={subTotal} {...pageProps} />
+    </motion.div>
     <Footer/>
   </>
   )

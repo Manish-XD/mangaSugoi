@@ -28,6 +28,8 @@
 .left ul{
     display: flex;
     list-style: none;
+    margin: auto !important;
+    padding-left: 4rem;
 }
 
 .left ul li{
